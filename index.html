@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Ufo GO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="c"></canvas>
+
+    <div id="hud">
+      <div id="score-box">
+        <span id="score-lbl">Score</span>
+        <span id="score-num">0</span>
+        <div id="hi-row">BEST <span id="hv">0</span></div>
+      </div>
+      <div id="lives">
+        <span class="heart" id="h0">❤️</span>
+        <span class="heart" id="h1">❤️</span>
+        <span class="heart" id="h2">❤️</span>
+      </div>
+      <div id="speed-pill">SPEED <b id="sv">1.0</b>×</div>
+    </div>
+
+    <div id="ldots">
+        <div class="ld" id="d0"></div>
+        <div class="ld on" id="d1"></div>
+        <div class="ld" id="d2"></div>
+    </div>
+
+    <div id="hints">
+      <div class="hint"><kbd>A</kbd>/<kbd>◀</kbd> Kiri</div>
+      <div class="hint"><kbd>D</kbd>/<kbd>▶</kbd> Kanan</div>
+    </div>
+
+    <div id="btns">
+      <button class="btn" id="bs">▶ Start</button>
+      <button class="btn" id="bp">⏸ Pause</button>
+      <button class="btn" id="br">↺ Restart</button>
+    </div>
+
+    <div class="ov" id="os">
+      <h1 style="color:#00e5ff;text-shadow:0 0 40px #00e5ff88">Ufo GO</h1>
+      <p class="sub">Endless Space Dash</p>
+      <p style="color:#ffffff55;font-size:12px;letter-spacing:2px;line-height:2.4;text-align:center;margin-bottom:32px">
+        💎 Kumpulkan Crystal &nbsp;•&nbsp; ☄️ Hindari Asteroid<br>
+        <kbd>A</kbd> <kbd>D</kbd> atau ◀ ▶ untuk pindah jalur
+      </p>
+      <button class="ob" id="obs" style="border-color:#00e5ff;color:#00e5ff">▶ MULAI</button>
+    </div>
+
+    <div class="ov hide" id="oo">
+      <h1 style="color:#ff4466;text-shadow:0 0 40px #ff446677">Game Over</h1>
+      <p class="sub">Ufo hancur!</p>
+      <div class="big" id="osc" style="color:#ffe500;text-shadow:0 0 22px #ffe50077">0</div>
+      <p class="sublbl">SKOR AKHIR</p>
+      <button class="ob" id="obr" style="border-color:#00e5ff;color:#00e5ff">↺ MAIN LAGI</button>
+    </div>
+
+    <div class="ov hide" id="op">
+      <h1 style="color:#ffe500;text-shadow:0 0 40px #ffe50077">Paused</h1>
+      <p class="sub" style="margin-bottom:32px">Game dijeda</p>
+      <button class="ob" id="opr" style="border-color:#ffe500;color:#ffe500">▶ LANJUTKAN</button>
+    </div>
+
+    <div id="flash"></div>
+    <div id="combo"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
