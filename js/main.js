@@ -253,6 +253,7 @@ const keys = { L: false, R: false };
 window.addEventListener('keydown', function(e) {
   if (e.key === 'a' || e.key === 'A' || e.key === 'ArrowLeft')  keys.L = true;
   if (e.key === 'd' || e.key === 'D' || e.key === 'ArrowRight') keys.R = true;
+  if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); if (G.running && !G.paused) cycleShipColor(); }
 });
 window.addEventListener('keyup', function(e) {
   if (e.key === 'a' || e.key === 'A' || e.key === 'ArrowLeft')  keys.L = false;
@@ -272,6 +273,7 @@ document.getElementById('bp').onclick  = togglePause;
 document.getElementById('br').onclick  = restartGame;
 document.getElementById('obs').onclick = startGame;
 document.getElementById('obr').onclick = restartGame;
+document.getElementById('bc').onclick = function() { if (G.running && !G.paused) cycleShipColor(); };
 document.getElementById('opr').onclick = togglePause;
 
 //  RAYCASTER (mouse hover / click on crystals) 
